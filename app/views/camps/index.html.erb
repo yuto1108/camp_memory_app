@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+
+<div class="main">
+  <ul class='camp-lists'>
+    <% @camps.each do |camp| %>
+      <li class='list'>
+        <%# <%= link_to item_path(item.id) do %> 
+        <%= image_tag camp.image, class: "camp-img" %>
+        <div class='item-info'>
+          <h3 class='camp-point-name'>
+            <%= camp.name %>
+          </h3>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
