@@ -1,0 +1,56 @@
+<div class="camp-new-contents">
+  <header class="camp-new-header">
+    <%= link_to image_tag('camp-logo-color.png' , size: '185x100'), "/" %>
+  </header>
+  <div class="camp-new-main">
+    <h2 class="camp-new-title">キャンプの思い出</h2>
+    <%= form_with model: @camp, local: true do |f| %>
+
+      <%# <%= render 'shared/error_messages', model: f.object %>
+
+      <%# 商品画像 %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          キャンプでの画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"camp-image" %>
+        </div>
+      </div>
+      <%# /商品画像 %>
+      <%# 商品名と商品説明 %>
+      <div class="new-camps">
+        <div class="weight-bold-text">
+          キャンプ場名
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :name, class:"camps-text", id:"camp-name", placeholder:"キャンプ場名（必須 40文字まで)", maxlength:"40" %>
+        <div class="camps-explain">
+          <div class="weight-bold-text">
+          キャンプでの思い出をぜひ
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :text, class:"camps-text", id:"camp-info", placeholder:"キャンプ場の情報（必須 1,000文字まで）キャンプ場の雰囲気、施設、住所等々・・・" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+      </div>
+      <%# /商品名と商品説明 %>
+          <div class="camps-detail">
+            <div class="weight-bold-text">
+            キャンプ場の所在地域
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :prefecture, {}, {class:"select-box", id:"camp-prefecture"}) %>
+          </div>
+      <%# 下部ボタン %>
+      <div class="sell-btn-contents">
+        <%= f.submit "投稿する" ,class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>
