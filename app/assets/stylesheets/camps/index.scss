@@ -1,0 +1,67 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+/* 商品一覧 */
+
+.camp-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.camp-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.camp-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.camp-img-content {
+  position: relative;
+}
+
+.camp-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.camp-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.camp-name {
+  font-size: 2.5vh;
+}
+
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //商品一覧 */
