@@ -6,13 +6,13 @@
     </ul>
     <%= link_to image_tag("camp-logo-color.png", class:"camp-icon"), "/" %>
     <ul class='lists-right'>
-      <%# <% if user_signed_in? %>
-        <%# <li><%= link_to current_user.nickname, "#", class: "user-nickname"</li> %>
-        <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"</li>
-      <%# <% else %> 
-        <li><%= link_to 'ログイン', root_path, class: "login" %></li>
-        <li><%= link_to '新規登録', root_path, class: "sign-up" %></li>
-      <%# <% end %> 
+      <% if user_signed_in? %>
+        <li><%= link_to '新規投稿', new_camp_path, class: "camp-new" %></li> 
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %> 
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %> 
     </ul>
   </div>
   <div class='search-bar-contents'>
