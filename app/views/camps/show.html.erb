@@ -5,6 +5,11 @@
       <%= @camp.name %>
     </h2>
     <%= image_tag @camp.image ,class:"camp-show-img" %>
+    <% if user_signed_in? && current_user.id == @camp.user_id %>
+      <%= link_to "投稿内容の編集", edit_camp_path, class: "item-red-btn" %>
+      <p class="or-text">or</p>
+      <%= link_to "削除", camp_path, method: :delete, class:"camp-destroy" %>
+    <% end %>
     <div class="camp-text">
       <%= @camp.text %>
     </div><table class="detail-table">

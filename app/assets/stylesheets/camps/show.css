@@ -34,8 +34,19 @@
   text-align: center;
 }
 
+.item-red-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px 10px 0px;
+  padding: 2vh 5vw;
+}
+
 .or-text {
   font-size: 20px;
+  margin: 0 auto;
 }
 
 .camp-destroy {
@@ -44,7 +55,7 @@
   font-size: 24px;
   color: black;
   margin: 20px 0px;
-  padding: 2vh 10vw;
+  padding: 2vh 5vw;
 }
 
 .camp-text {
