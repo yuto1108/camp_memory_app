@@ -1,0 +1,22 @@
+<%= render "shared/second-header" %>
+<div class="show-main">
+  <div class="show-content">
+    <h2 class="camp-name">
+      <%= @camp.name %>
+    </h2>
+    <%= image_tag @camp.image ,class:"camp-show-img" %>
+    <div class="camp-text">
+      <%= @camp.text %>
+    </div><table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-item">投稿者</th>
+        <td class="detail-value"><%= @camp.user.nickname %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">キャンプ場所在地域</th>
+        <td class="detail-value"><%= @camp.prefecture.prefecture %></td>
+      </tr>
+    </table>
+  </div>
+</div>

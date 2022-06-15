@@ -13,9 +13,12 @@ class CampsController < ApplicationController
       render :new
     end
   end
+  def show
+    @camp = Camp.find(params[:id])
+  end
 
   private
   def camp_params
-    params.require(:camp).permit(:image, :name, :text, :prefecture_id)
+    params.require(:camp).permit(:image, :name, :text, :prefecture_id).merge(user_id: current_user.id)
   end
 end
