@@ -13,10 +13,10 @@
     <div class="camp-text">
       <%= @camp.text %>
     </div><table class="detail-table">
-    <tbody>
+    <table>
       <tr>
         <th class="detail-item">投稿者</th>
-        <td class="detail-value"><%= @camp.user.nickname %></td>
+        <td class="detail-value"><%=link_to @camp.user.nickname,user_path(@camp.user.id) %></td>
       </tr>
       <tr>
         <th class="detail-item">キャンプ場所在地域</th>

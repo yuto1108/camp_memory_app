@@ -1,6 +1,6 @@
 class CampsController < ApplicationController
   def index
-    @camps = Camp.all
+    @camps = Camp.all.order("created_at DESC")
   end
 
   def new
