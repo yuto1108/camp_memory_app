@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+  <p class="user-name"><%= @nickname %>さんの投稿一覧</p>
+  <div class='camp-contents'>
+    <% @camps.each do |camp| %>
+      <div class='camp-tweet'>
+        <%= link_to camp_path(camp.id) do %>
+          <div class='camp-img-content'>
+            <%= image_tag camp.image, class: "camp-img" %>
+          </div>
+            <h3 class='camp-name'>
+              <%= camp.name %>
+            </h3>
+        <% end %>
+        <div class='user-star-btn'>
+          <%= image_tag "star.png", class:"star-icon" %>
+          <span class='star-count'>0</span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

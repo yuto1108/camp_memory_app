@@ -1,28 +1,27 @@
 <%= render "shared/header" %>
 
-
 <div class='main'>
-  <%# 商品一覧 %>
   <div class='camp-contents'>
-    <ul class='camp-lists'>
-      <% @camps.each do |camp| %>
+    <% @camps.each do |camp| %>
+      <div class="camp-tweet">
         <%= link_to camp_path(camp.id) do %>
-          <li class='list'>
-            <div class='camp-img-content'>
-              <%= image_tag camp.image, class: "camp-img" %>
-            </div>
-            <div class='camp-info'>
-              <h3 class='camp-name'>
-                <%= camp.name %>
-              </h3>
-            </div>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
-          </li>
+          <div class='camp-img-content'>
+            <%= image_tag camp.image, class: "camp-img" %>
+          </div>
+          <h3 class='camp-name'>
+            <%= camp.name %>
+          </h3>
         <% end %>
-      <% end %>
-    </ul>
+        <div class="user-info">
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+          <a href="/users/<%= camp.user.id %>" class="user-name">
+            <%= camp.user.nickname %>
+          </a>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <%# /商品一覧 %>
+</div>

@@ -15,54 +15,61 @@ a {
   padding: 10vh 0;
 }
 
-.camp-lists {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
+.camp-tweet{
+  text-align: center;
+  margin-bottom: 15vh;
 }
-
-.camp-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
-}
-
 
 .camp-img-content {
   position: relative;
+  text-align: center;
 }
 
 .camp-img {
-  width: 33vh;
-  height: 33vh;
+  width: 40vw;
+  height: 70vh;
 }
 
 .camp-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
+  text-align: center;
 }
 
 .camp-name {
   font-size: 2.5vh;
+  margin: 10px 0;
+  color: black;
+}
+
+.user-info{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 
 .star-btn {
   display: flex;
   align-items: center;
+  margin: 10px 0;
 }
 
 .star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
+  height: 4vh;
+  width: 4vh;
+  margin-right: 2vw ;
 }
 
 .star-count {
-  font-size: 2vh;
+  font-size: 4vh;
 }
 
-/* //商品一覧 */
+.user-name{
+  font-size: 4vh;
+}
+
+.user-name a{
+  text-decoration: none;
+}
