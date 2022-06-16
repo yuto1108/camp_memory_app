@@ -22,9 +22,9 @@ class CampsController < ApplicationController
   
   def edit
     @camp = Camp.find(params[:id])
-    # unless user_signed_in? && current_user.id == @camp.user_id
-    #   redirect_to action: :index
-    # end
+    unless user_signed_in? && current_user.id == @camp.user_id
+      redirect_to action: :index
+    end
   end
 
   def update
@@ -33,6 +33,14 @@ class CampsController < ApplicationController
       redirect_to action: :show
     else
       render :edit
+    end
+  end
+
+  def destroy
+    @camp = Camp.find(params[:id])
+    if user_signed_in? && current_user.id == @item.user_id
+      @camp.destroy
+      redirect_to action: :index
     end
   end
 
