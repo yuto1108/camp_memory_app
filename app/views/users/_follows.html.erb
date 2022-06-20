@@ -1,0 +1,15 @@
+<% if @users.exists? %>
+  <% @users.each do |user| %>
+    <table class="follow-index">
+      <tr>
+        <td class="user-nickname">
+          <%= link_to "#{user.nickname}さん", user_path(user.id) %>
+        </td>
+        <td>フォロー数: <%= user.followed.count  %></td>
+        <td>フォロワー数: <%= user.follower.count %></td>
+      </tr>
+    </table>
+  <% end %>
+<% else %>
+  <p>ユーザーはいません</p>
+<% end %>

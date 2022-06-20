@@ -1,6 +1,11 @@
 <%= render "shared/header" %>
 
 <div class='main'>
+  <div class="user-nickname">
+    <% if user_signed_in? %>
+      <%= link_to "ようこそ、#{current_user.nickname}さん", user_path(current_user.id) %>
+    <% end %>
+  </div>
   <div class='camp-contents'>
     <% @camps.each do |camp| %>
       <div class="camp-tweet">

@@ -1,0 +1,23 @@
+.user-show-header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+}
+
+.profile-edit{
+  font-size: 3vh;
+  padding: 0 7vw;
+}
+
+.user-follow{
+  background-color: #fff;
+  padding: 3vh 7vw;
+  font-size: 2vh;
+  display: flex;
+}
+
+.user_follower{
+  margin-left: 15px;
+  text-decoration: none;
+}
