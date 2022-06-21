@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="user-follow">
-      <%= link_to follows_user_path(@user) do %>
+      <%= link_to followeds_user_path(@user) do %>
         <div class="user_followed">フォロー中<%= @following_users.count %></div>
       <% end %>&nbsp;&nbsp;
       <%= link_to followers_user_path(@user) do %>
