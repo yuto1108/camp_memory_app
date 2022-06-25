@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "camps#index"
-  resources :camps
+  resources :camps do
+    collection do
+      get "search"
+    end
+  end
   resources :users, only:[:index, :show, :edit, :update] do
     member do
       get :followeds, :followers
