@@ -38,7 +38,7 @@ class CampsController < ApplicationController
 
   def destroy
     @camp = Camp.find(params[:id])
-    if user_signed_in? && current_user.id == @item.user_id
+    if user_signed_in? && current_user.id == @camp.user_id
       @camp.destroy
       redirect_to action: :index
     end

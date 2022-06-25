@@ -1,44 +1,38 @@
-# テーブル設計
+# アプリケーション名
+CAMP MEMORY
 
-## campsテーブル
+# アプリケーション概要
+キャンプの思い出をユーザーが投稿し共有することができる
 
-| Column         | Type        | Options                         |
-| -------------- | ----------- | ------------------------------- |
-| prefecture_id  | integer     | null: false                     |
-| name           | string      | null: false                     |
-| text           | text        | null: false                     |
-| user           | references  | null: false, foreign_key: true  |
+# URL
+https://camp-memory.herokuapp.com/
 
-### Association
+# テスト用アカウント
+Basic認証ID: admin
+Basic認証password: 2222
+test_user1 メールアドレス: aaa@bbb
+test_user1 password: 123123
+test_user2 メールアドレス: aaa@aaa
+test_user2 password: 123123
 
-- belongs_to :user
-- has_one :purchase
-- has_many :comments
+# 利用方法
+## キャンプの思い出を投稿
+1 トップページのヘッダーから新規登録をする
+2 トップページのヘッダーから新規投稿をする
 
+## 他ユーザーーのフォロー
+他ユーザーをフォローしたい時はユーザー詳細画面上部のフォローするをクリック
 
-## usersテーブル
+# アプリケーションを作成した背景
+趣味のキャンプを行なっている時に喜びを共有できる場が少ないと感じたため
 
-| Column              | Type     | Options                     |
-|---------------------|----------|-----------------------------|
-| nickname            | string   | null: false                 |
-| email               | string   | null: false,  unique: true  |
-| encrypted_password  | string   | null: false                 |
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/1-vNRnaaC5XFKS3z4kQVg-IFcvEmRhwAy45FLWDk7piQ/edit#gid=982722306
 
+# 実装した機能
+## 新規登録
+[![Image from Gyazo](https://i.gyazo.com/35c46820ea64350ce5826ddf5cbe5c81.gif)](https://gyazo.com/35c46820ea64350ce5826ddf5cbe5c81)
+[![Image from Gyazo](https://i.gyazo.com/7cdad22a3d11836545930b31ac301e98.gif)](https://gyazo.com/7cdad22a3d11836545930b31ac301e98)
 
-### Association
-
-- has_many :camps
-- has_many :comments
-
-
-## commentsテーブル
-| Column   | Type        | Options                         |
-|----------|-------------|---------------------------------|
-| content  | string      | null: false                     |
-| user     | references  | null: false, foreign_key: true  |
-| camp     | references  | null: false, foreign_key: true  |
-
-### Association
-
-- belongs_to :user
-- belongs_to :camp
+## 新規投稿
+[![Image from Gyazo](https://i.gyazo.com/d827abdb417e90efe60451ff0de8e679.gif)](https://gyazo.com/d827abdb417e90efe60451ff0de8e679)
