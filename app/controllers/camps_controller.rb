@@ -44,6 +44,10 @@ class CampsController < ApplicationController
     end
   end
 
+  def search
+    @camps = Camp.search(params[:keyword]).order("created_at DESC")
+  end
+
   private
   def camp_params
     params.require(:camp).permit(:image, :name, :text, :prefecture_id).merge(user_id: current_user.id)

@@ -6,27 +6,5 @@
       <%= link_to "ようこそ、#{current_user.nickname}さん", user_path(current_user.id) %>
     <% end %>
   </div>
-  <div class='camp-contents'>
-    <% @camps.each do |camp| %>
-      <div class="camp-tweet">
-        <%= link_to camp_path(camp.id) do %>
-          <div class='camp-img-content'>
-            <%= image_tag camp.image, class: "camp-img" %>
-          </div>
-          <h3 class='camp-name'>
-            <%= camp.name %>
-          </h3>
-        <% end %>
-        <div class="user-info">
-          <div class='star-btn'>
-            <%= image_tag "star.png", class:"star-icon" %>
-            <span class='star-count'>0</span>
-          </div>
-          <a href="/users/<%= camp.user.id %>" class="user-name">
-            <%= camp.user.nickname %>
-          </a>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <%= render "index" %>
 </div>
