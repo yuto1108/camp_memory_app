@@ -8,16 +8,16 @@ CAMP MEMORY
 https://camp-memory.herokuapp.com/
 
 # テスト用アカウント
-Basic認証ID: admin
-Basic認証password: 2222
-test_user1 メールアドレス: aaa@bbb
-test_user1 password: 123123
-test_user2 メールアドレス: aaa@aaa
-test_user2 password: 123123
+Basic認証ID: admin<br>
+Basic認証password: 2222<br>
+test_user1 メールアドレス: aaa@bbb<br>
+test_user1 password: 123123<br>
+test_user2 メールアドレス: aaa@aaa<br>
+test_user2 password: 123123<br>
 
 # 利用方法
 ## キャンプの思い出を投稿
-1 トップページのヘッダーから新規登録をする
+1 トップページのヘッダーから新規登録をする<br>
 2 トップページのヘッダーから新規投稿をする
 
 ## 他ユーザーーのフォロー
@@ -45,7 +45,7 @@ https://docs.google.com/spreadsheets/d/1-vNRnaaC5XFKS3z4kQVg-IFcvEmRhwAy45FLWDk7
 [![Image from Gyazo](https://i.gyazo.com/3dea5c8f17259b7206686527636e70ca.gif)](https://gyazo.com/3dea5c8f17259b7206686527636e70ca)
 
 # 今後実装予定の機能
-新規投稿で記入してもらっている都道府県での検索機能
+新規投稿で記入してもらっている都道府県での検索機能<br>
 コメント機能
 
 # データーベース設計
@@ -55,5 +55,5 @@ https://docs.google.com/spreadsheets/d/1-vNRnaaC5XFKS3z4kQVg-IFcvEmRhwAy45FLWDk7
 [![Image from Gyazo](https://i.gyazo.com/bbd0cc1a28a7fe7dcad262a150dc2de3.png)](https://gyazo.com/bbd0cc1a28a7fe7dcad262a150dc2de3)
 
 # 工夫したこと
-・都道府県の入力にアクティブハッシュを使うことでユーザーの負担を軽減した
+・都道府県の入力にアクティブハッシュを使うことでユーザーの負担を軽減した<br>
 ・フォロー機能を実装したことでより共感を得やすいアプリを作ろうとした
