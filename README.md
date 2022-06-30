@@ -45,8 +45,7 @@ https://docs.google.com/spreadsheets/d/1-vNRnaaC5XFKS3z4kQVg-IFcvEmRhwAy45FLWDk7
 [![Image from Gyazo](https://i.gyazo.com/3dea5c8f17259b7206686527636e70ca.gif)](https://gyazo.com/3dea5c8f17259b7206686527636e70ca)
 
 # 今後実装予定の機能
-新規投稿で記入してもらっている都道府県での検索機能<br>
-コメント機能
+新規投稿で記入してもらっている都道府県での検索機能
 
 # データーベース設計
 [![Image from Gyazo](https://i.gyazo.com/208a8ef6dd62da689f1a6827d8ac3213.png)](https://gyazo.com/208a8ef6dd62da689f1a6827d8ac3213)
