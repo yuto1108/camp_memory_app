@@ -24,4 +24,28 @@
       </tr>
     </table>
   </div>
+
+  <div class="comment-box">
+    <% if user_signed_in? %>
+      <%= form_with model: [@camp, @comment], local: true do |f| %>
+        <div class="comment-text">
+          <%= f.text_field :content, id:"comment_content", class: :comment_text %>
+        </div>
+        <div class="comment-btn">
+          <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+          <%= f.submit "コメントする", class: :comment_btn %>
+        </div>
+      <% end %>
+    <% end %>
+    <ul class="comments_lists">
+      <% @comments.each do |comment| %>
+        <li class="comments_list">
+          <%= comment.content %>
+        </li>
+        <li class="comment_user">
+          <%= link_to comment.user.nickname, user_path(comment.user.id) %>
+        </li>
+      <% end %>
+    <ul>
+  </div>
 </div>
