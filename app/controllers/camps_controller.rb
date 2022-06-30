@@ -18,6 +18,8 @@ class CampsController < ApplicationController
   
   def show
     @camp = Camp.find(params[:id])
+    @comment = Comment.new
+    @comments = @camp.comments.includes(:user)
   end
   
   def edit
