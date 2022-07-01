@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     collection do
       get "search"
     end
-    resources :comments, only: [:create, :destroy]
+    resource :comments, only: :create
   end
   resources :users, only:[:index, :show, :edit, :update] do
     member do
